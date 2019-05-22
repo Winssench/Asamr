@@ -1,0 +1,14 @@
+<div class="row" >
+    <div class="col-xs-12">
+        <button class="btn btn-success" routerLink ="new">New Story</button>
+    </div>
+</div>
+<hr>
+<div class="row" >
+    <div class="col-xs-12">
+        <app-story-item *ngFor="let storyEl of stories; let i = index" 
+        [storyImported] = "storyEl"
+        [index]="i"
+         ></app-story-item>
+    </div>
+</div>

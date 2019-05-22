@@ -1,0 +1,19 @@
+
+
+.main-content {
+    
+    position:relative;
+
+    height: 1000px;
+}
+.outer {
+    border: 1px solid red;
+    background: yellow;
+    position:absolute;
+    right:1600px;
+    left:15px;
+    top:73px;
+    text-align: center;
+    width: 242px;
+    height : 700px;
+}

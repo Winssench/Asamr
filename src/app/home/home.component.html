@@ -1,0 +1,27 @@
+<div class="container">
+
+
+    <img  src="https://scontent-frx5-1.xx.fbcdn.net/v/t31.0-8/10708651_1511333972472795_7535864660774189964_o.jpg?_nc_cat=103&_nc_ht=scontent-frx5-1.xx&oh=c38f8c9b0b892caa803feacafc1f54a7&oe=5D3A8D65" alt="">
+    <h1>Welcome to the Asamr Corporation : </h1>
+    <div class="row">
+        <div class="col-md-5">
+            <br>
+            <br>
+           <p>
+               an open source plateform conecting tousands of people around the maghreb
+               region as well as the rest of the world to be connected in simple,
+               fast and rapid plateform to able to connect, get started now with us.
+           </p>
+            
+        </div>
+        <div class="col-md-6 hihiborder">
+            <div *ngIf="isClicked; else isOtherComponent">
+                <app-signin></app-signin>
+            </div>
+            <ng-template #isOtherComponent>
+                <app-signup></app-signup>
+            </ng-template>
+            
+        </div>
+      </div>
+</div>

@@ -1,0 +1,32 @@
+
+<div class="hello">
+  <div class="row">
+    <div class="col-xs-12">
+      <img src="{{story.imagePath}}" alt="{{story.name}}" style="max-height:500px; max-width: 600px;">
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-xs-12">
+      <h1>{{story.name}}</h1>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-xs-12">
+      <div   class="btn-group" appDropDown #r="appDropDown">
+        <button type="button" class="btn btn-primary dropdown-toggle">Manage Story
+           <span class="caret"></span>
+        </button>
+        <ul  class="dropdown-menu " [ngClass]="{'show':r.isOpen}"> 
+            <li><a style="cursor: pointer;">To Wall</a></li>
+            <li><a style="cursor: pointer;" >Edit Story</a></li>
+            <li><a style="cursor: pointer;">Delete Story</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-xs-12">
+      {{story.description}}
+    </div>
+  </div>
+</div>
