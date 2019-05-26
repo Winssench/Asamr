@@ -1,13 +1,15 @@
-export class Story
-{
-    public name : string;
-    public description : string;
-    public imagePath: string;
+import { Like } from '../shared/like.model';
 
-    constructor(name : string, desc : string, imagePath: string)
-    {
+export class Story {
+    private name: string;
+    private description: string;
+    private imagePath: string;
+    private likes: Like[];
+
+    constructor(name: string, desc: string, imagePath: string, likes: Like[]) {
         this.description = desc;
         this.name = name;
         this.imagePath = imagePath;
+        this.likes = likes;
     }
 }

@@ -9,19 +9,18 @@ import { ActivatedRoute, Params } from '@angular/router';
   styleUrls: ['./story-detail.component.css']
 })
 export class StoryDetailComponent implements OnInit {
-  story : Story;
-  id : number;
-  constructor(private storyService : StoryService, private route : ActivatedRoute) { }
+  story: Story;
+  id: number;
+  constructor(private storyService: StoryService, private route: ActivatedRoute) { }
 
   ngOnInit() {
     this.route.params.subscribe(
-      (params : Params)=> {
-        this.id = +params['id'];
+      (params: Params) => {
+        this.id = +params.id;
         this.story = this.storyService.gerStoryById(this.id);
       });
   }
-  onDeleteStory()
-  {
+  onDeleteStory() {
     this.storyService.deleteStory(this.id);
   }
 

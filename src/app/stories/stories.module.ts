@@ -8,6 +8,7 @@ import { StoriesComponent } from './stories.component';
 import { StoryItemComponent } from './story-list/story-item/story-item.component';
 import { SharedModule } from '../shared/shared.module';
 import { ProfileComponent } from './profile/profile.component';
+import { LikesComponent } from './likes/likes.component';
 
 @NgModule({
   declarations: [
@@ -15,7 +16,7 @@ import { ProfileComponent } from './profile/profile.component';
                   StoryDetailComponent, 
                   StoryListComponent, 
                  
-                  StoryStartComponent, StoryItemComponent, ProfileComponent],
+                  StoryStartComponent, StoryItemComponent, ProfileComponent, LikesComponent],
   imports: [
     SharedModule,
     CommonModule,
