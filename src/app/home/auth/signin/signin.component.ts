@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { HomeService } from '../../home.service';
+import { FormGroup, FormControl, Validators } from '@angular/forms';
 
 @Component({
   selector: 'app-signin',
@@ -8,9 +9,15 @@ import { HomeService } from '../../home.service';
 })
 export class SigninComponent implements OnInit {
 
+  signingForm : FormGroup;
   constructor(private homeService : HomeService) { }
 
-  ngOnInit() {
+  ngOnInit()
+  {
+    this.signingForm = new FormGroup({
+      'email' : new FormControl(null,[Validators.required,Validators.email]),
+      'password': new FormControl(null,Validators.required)
+    })
   }
 
   onCreateAccount()

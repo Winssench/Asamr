@@ -10,6 +10,7 @@ import { HomeModule } from './home/home.module';
 import { HomeService } from './home/home.service';
 import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
 import { SharedModule } from './shared/shared.module';
+import { ReactiveFormsModule } from '@angular/forms';
 @NgModule({
   declarations: [
     AppComponent,
@@ -23,6 +24,7 @@ import { SharedModule } from './shared/shared.module';
     AppRoutingModule,
     HomeModule,
     SharedModule,
+
     // StoriesModule
   ],
   providers: [HomeService],

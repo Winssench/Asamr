@@ -2,14 +2,31 @@
   signin works!
 </p> -->
 <div class="col-xs-12 col-sm-10 col-md-8 col-sm-offset-1 col-md-offset-2">
-    <form >
+    <form [formGroup]="signingForm" (ngSubmit)="onSubmit()">
       <div class="form-group">
         <label for="email">Mail</label>
-        <input type="email" id="email" name="email" ngModel class="form-control">
+        <input 
+                type="email" 
+                id="email" 
+                name="email"
+                formControlName="email" 
+                class="form-control">
+                <span
+                *ngIf="!signingForm.get('email').valid && signingForm.get('email').touched"
+                class="help-block">Please enter a valid email</span>
       </div>
+      
       <div class="form-group">
         <label for="password">Password</label>
-        <input type="password" id="password" name="password" ngModel class="form-control">
+        <input 
+                type="password" 
+                id="password" 
+                name="password" 
+                formControlName="password"
+                class="form-control">
+                <span
+                *ngIf="!signingForm.get('password').valid && signingForm.get('password').touched"
+                class="help-block">Please enter a valid password</span>
       </div>
       <button class="btn btn-primary" type="submit">
         Sign in

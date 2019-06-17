@@ -11,6 +11,7 @@ import { ActivatedRoute, Params } from '@angular/router';
 export class StoryDetailComponent implements OnInit {
   story: Story;
   id: number;
+  showLikes : boolean;
   constructor(private storyService: StoryService, private route: ActivatedRoute) { }
 
   ngOnInit() {
@@ -22,6 +23,10 @@ export class StoryDetailComponent implements OnInit {
   }
   onDeleteStory() {
     this.storyService.deleteStory(this.id);
+  }
+  toggleLikes()
+  {
+    this.showLikes = !this.showLikes;
   }
 
 }
